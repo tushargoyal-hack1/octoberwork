@@ -19,3 +19,9 @@ for result in results:
     word = result[1].encode('ascii', 'ignore')
     if (word):
         print(word.decode() + ":\t\t" + count)
+
+        
+input = sc.textFile("file:///sparkcourse/book.txt")
+words = input.flatMap(normalizeWords)
+words.list()
+print(words)

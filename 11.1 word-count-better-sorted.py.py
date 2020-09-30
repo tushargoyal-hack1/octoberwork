@@ -20,3 +20,6 @@ for result in results:
     if (word):
         print(word.decode() + ":\t\t" + count)
         print("Spark demo")
+wordCounta = words.map(laambda x: (x, 1)).reducaeByKey(lambda x, y: x + y)
+wordCountsSorted = wordCounts.map(lambda x: (x[1], x[0])).sortByKey()
+results = wordCountsSaorted.collect()

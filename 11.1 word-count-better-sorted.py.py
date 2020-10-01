@@ -20,3 +20,7 @@ for result in results:
     if (word):
         print(word.decode() + ":\t\t" + count)
         print("Spark demo")
+word = result[1].encode('ascii', 'ignore')
+    if (word):
+        print(word.decode() + ":\t\t" + count)
+        print("Spark demo")
